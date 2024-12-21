@@ -3,11 +3,13 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradiente azul */
+    color: #2c3e50; /* Cor da fonte padrão */
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #2c3e50; /* Azul escuro */
+    color: #ecf0f1; /* Branco claro */
     padding: 1rem;
     text-align: center;
 }
@@ -23,7 +25,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ecf0f1; /* Branco claro */
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -51,18 +53,19 @@ main {
 
 .galeria img:hover {
     transform: scale(1.1);
-    border-color: #333;
+    border-color: #2c3e50; /* Azul escuro */
 }
 
 form {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #ecf0f1; /* Branco claro */
     padding: 1rem;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 0 auto 2rem auto; /* Centralizar o formulário */
     max-width: 600px; /* Limitar a largura do formulário */
+    color: #2c3e50; /* Cor da fonte */
 }
 
 form label {
@@ -79,16 +82,16 @@ form input, form textarea {
 form button {
     margin-top: 1rem;
     padding: 0.5rem;
-    background-color: #333;
-    color: #fff;
+    background-color: #2c3e50; /* Azul escuro */
+    color: #ecf0f1; /* Branco claro */
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 footer {
-    background-color: #444; /* Clarear o fundo do rodapé */
-    color: #fff;
+    background-color: #34495e; /* Azul médio */
+    color: #ecf0f1; /* Branco claro */
     text-align: center;
     padding: 1rem;
     width: 100%;
@@ -108,14 +111,14 @@ footer ul li {
 }
 
 footer ul li a {
-    color: #fff; /* Mudar a cor dos links para branco */
+    color: #ecf0f1; /* Branco claro */
     text-decoration: none;
     font-size: 1.5rem; /* Aumentar o tamanho dos ícones */
     transition: color 0.3s;
 }
 
 footer ul li a:hover {
-    color: #ddd; /* Mudar a cor dos links ao passar o mouse */
+    color: #bdc3c7; /* Cinza claro */
 }
 
 @media (max-width: 768px) {
@@ -134,12 +137,14 @@ footer ul li a:hover {
         margin: 0.5rem 0;
     }
 }
+
 #testemunhos {
-    background-color: #f9f9f9;
+    background-color: #caecf5; /* Fundo claro */
     padding: 2rem;
     text-align: center;
     position: relative;
     height: 200px; /* Ajuste conforme necessário */
+    color: #2c3e50; /* Cor da fonte */
 }
 
 .testemunho {
@@ -149,6 +154,7 @@ footer ul li a:hover {
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 1s;
+    color: #2c3e50; /* Cor da fonte */
 }
 
 .testemunho.active {
