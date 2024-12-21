@@ -30,6 +30,7 @@ nav ul li a {
 
 main {
     padding: 2rem;
+    margin-bottom: 3rem; /* Adicionar margem inferior ao main */
 }
 
 .galeria {
@@ -53,10 +54,15 @@ main {
     border-color: #333;
 }
 
-
 form {
     display: flex;
     flex-direction: column;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 2rem auto; /* Centralizar o formulário */
+    max-width: 600px; /* Limitar a largura do formulário */
 }
 
 form label {
@@ -66,6 +72,8 @@ form label {
 form input, form textarea {
     padding: 0.5rem;
     margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 form button {
@@ -74,18 +82,42 @@ form button {
     background-color: #333;
     color: #fff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 footer {
-    background-color: #333;
+    background-color: #444; /* Clarear o fundo do rodapé */
     color: #fff;
     text-align: center;
     padding: 1rem;
-    position: fixed;
     width: 100%;
     bottom: 0;
 }
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer ul li a {
+    color: #fff; /* Mudar a cor dos links para branco */
+    text-decoration: none;
+    font-size: 1.5rem; /* Aumentar o tamanho dos ícones */
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #ddd; /* Mudar a cor dos links ao passar o mouse */
+}
+
 @media (max-width: 768px) {
     .galeria {
         flex-direction: column;
@@ -101,4 +133,24 @@ footer {
     nav ul li {
         margin: 0.5rem 0;
     }
+}
+#testemunhos {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    height: 200px; /* Ajuste conforme necessário */
+}
+
+.testemunho {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.testemunho.active {
+    opacity: 1;
 }

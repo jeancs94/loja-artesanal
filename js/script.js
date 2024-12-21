@@ -14,3 +14,24 @@ document.addEventListener('DOMContentLoaded', () => {
     welcomeMessage.style.textAlign = 'center';
     document.body.insertBefore(welcomeMessage, document.body.firstChild);
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const testemunhos = document.querySelectorAll('.testemunho');
+    let currentIndex = 0;
+
+    function showTestemunho(index) {
+        testemunhos.forEach((testemunho, i) => {
+            testemunho.classList.remove('active');
+            if (i === index) {
+                testemunho.classList.add('active');
+            }
+        });
+    }
+
+    function nextTestemunho() {
+        currentIndex = (currentIndex + 1) % testemunhos.length;
+        showTestemunho(currentIndex);
+    }
+
+    showTestemunho(currentIndex);
+    setInterval(nextTestemunho, 3000); // Mudar testemunho a cada 3 segundos
+});
