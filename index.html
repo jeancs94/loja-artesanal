@@ -1,80 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <meta name="description" content="Loja de produtos artesanais únicos e feitos com amor.">
     <meta name="keywords" content="artesanato, produtos artesanais, loja artesanal">
     <meta name="author" content="Jean Silveira">    
     <link href="css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja de Produtos Artesanais</title>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
-    <header>
-        <h1>Loja de Produtos Artesanais</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
+    <aside class="header p-3 position-fixed start-0 top-0 end-0 bg-dark">
+        <div class="d-flex justify-content-between align-items-center">
+            <a href="index.html" class="text-decoration-none text-white fs-5 fw-bold">Loja de Produtos Artesanais</a>
+            <div>
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toglle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                      </svg>
+                </button>
+            </div> 
+        </div>
+    </aside>
+    <nav id="navbar" class="collapse navbar-collapse dropdown-nav" style="background-color: black;" aria-label="Main navigation">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#galeria" class="nav-link">Galeria</a></li>
+            <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+        </ul>
+    </nav>
+    <div class="menu-spacing"></div>
+
+    <section class="bg-dark rounded shadow-sm text-white">
             <h2>Bem-vindo à nossa loja!</h2>
             <p>Descubra produtos artesanais únicos e feitos com amor.</p>
-        </section>
-        <section id="galeria">
-            <h2>Galeria de Produtos</h2>
-            <div class="galeria">
-                <a href="images/image1.webp" data-lightbox="galeria"><img src="images/image1.webp" alt="Produto Artesanal 1"></a>
-                <a href="images/image2.webp" data-lightbox="galeria"><img src="images/image2.webp" alt="Produto Artesanal 2"></a>
-                <a href="images/image3.webp" data-lightbox="galeria"><img src="images/image3.webp" alt="Produto Artesanal 3"></a>
-                <!-- Adicione mais imagens conforme necessário -->
+    </section>
+    <section id="galeria">
+            <h2 class="text-center my-4">Galeria de Produtos</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-3">
+                    <a href="images/image1.webp" data-lightbox="galeria"><img src="images/image1.webp" class="img-fluid rounded" alt="Produto Artesanal 1"></a>
+                </div>
+                <div class="col-md-3">
+                    <a href="images/image2.webp" data-lightbox="galeria"><img src="images/image2.webp" class="img-fluid rounded" alt="Produto Artesanal 2"></a>
+                </div>
+                <div class="col-md-3">
+                    <a href="images/image3.webp" data-lightbox="galeria"><img src="images/image3.webp" class="img-fluid rounded" alt="Produto Artesanal 3"></a>
+                </div>
             </div>
-        </section>
-        <section id="testemunhos">
+    </section>
+    <section class="bg-dark p-4 rounded shadow-sm text-center" >
             <h2>O que nossos clientes dizem</h2>
-            <div class="testemunho">
-                <p>"Produtos incríveis e atendimento excelente!" - Maria Silva</p>
-            </div>
-            <div class="testemunho">
-                <p>"Adorei a qualidade dos produtos artesanais." - João Pereira</p>
-            </div>
+                <div class="testemunho">
+                    <p>"Produtos incríveis e atendimento excelente!" - Maria Silva</p>
+                </div>
+                <div class="testemunho">
+                    <p>"Adorei a qualidade dos produtos artesanais." - João Pereira</p>
+                </div>
             <!-- Adicione mais testemunhos conforme necessário -->
-        </section>        
-        <section id="contato">
+    </section>        
+    <section id="contato" class="bg-dark p-4 rounded shadow-sm my-4">
             <h2>Contato</h2>
             <form action="https://formspree.io/f/mkggwqwp" method="POST">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" required></textarea>
-                <button type="submit">Enviar</button>
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome:</label>
+                    <input type="text" id="nome" name="nome" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mensagem" class="form-label">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
-        <h3>Telefone: (11) 1234-5678</h3>
-        <h3>Endereço: Rua dos Artesanatos, 123, Bairro Artesanal</h3>
-        <div class="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2194.6422996330634!2d-46.9503743225287!3d-22.31834761891509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c850d2b973a34b%3A0x4dd50830896d7df1!2sR.%20Gen%C3%A9sio%20Pessiqueli%20-%20Mogi%20Gua%C3%A7u%2C%20SP%2C%2013846-437!5e0!3m2!1spt-BR!2sbr!4v1734815757607!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        </section>
-    </main>
-    <footer>
+            <h3>Telefone: (11) 1234-5678</h3>
+
+    </section>
+    <footer class="bg-dark text-white text-center p-3">
         <p>Siga-nos nas redes sociais!</p>
-        <ul>
-            <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+        <ul class="nav justify-content-center">
+            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
         </ul>
     </footer>   
     <script src="js/script.js"></script>
     <script src="js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
