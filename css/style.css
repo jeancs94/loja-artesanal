@@ -6,8 +6,9 @@ body {
     box-sizing: border-box;
     background: #cac3b7;
     color: #f7f7f7f6; /* Cor da fonte padrão */
+    min-height: 100vh;
 }
-
+/* Estilizando as imagens */
 .galeria img {
     width: 100%;
     max-width: 200px;
@@ -16,7 +17,7 @@ body {
     border-radius: 5px;
     transition: transform 0.3s, border-color 0.3s;
 }
-
+/* Aumenta o tamanho da imagem ao passar o mouse */
 .galeria img:hover {
     transform: scale(1.1);
     border-color: #2c3e50; /* Azul escuro */
@@ -66,4 +67,7 @@ body {
 /* gambiarra para das espacamento do menu */
 .menu-spacing{
     height: 65px;
+}
+#galeria {
+    margin: 50px 0;
 }
